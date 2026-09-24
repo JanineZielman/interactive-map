@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kröller-Müller Sculpture Garden</title>
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section id="map" aria-label="Interactive sculpture garden map"></section>
+
+    <header class="map-header">
+      <p class="eyebrow">Sculpture garden</p>
+      <h1>Explore the collection</h1>
+    </header>
+
+    <div class="map-actions" aria-label="Map controls">
+      <button id="zoom-in" type="button" aria-label="Zoom in">+</button>
+      <button id="zoom-out" type="button" aria-label="Zoom out">−</button>
+      <button id="reset-map" class="reset" type="button">Reset</button>
+    </div>
+
+    <button id="close-panel" class="panel-scrim" type="button" aria-label="Close information panel"></button>
+    <aside id="info-panel" class="info-panel" aria-live="polite" aria-hidden="true">
+      <button id="panel-close" class="panel-close" type="button" aria-label="Close">×</button>
+      <p class="panel-number" id="panel-number"></p>
+      <h2 id="panel-title"></h2>
+      <p class="artist" id="panel-artist"></p>
+      <dl id="panel-details"></dl>
+      <p class="panel-placeholder">This panel can later contain descriptions, images, audio, links, and a button to highlight a route.</p>
+    </aside>
+
+    <div id="status" class="status" role="status">Loading collection…</div>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
